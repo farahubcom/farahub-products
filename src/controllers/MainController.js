@@ -1,19 +1,15 @@
-const Controller = require('../../../foundation/Controller');
+const { Controller } = require('@farahub/framework/foundation');
 const Auth = require('../../authentication/facades/Auth');
 const Workspace = require('../../core/facades/Workspace');
-const Injection = require('../../../facades/Injection');
-const Validator = require('../../../facades/Validator');
-const Lang = require('../../../facades/Lang');
-const Num = require('../../../facades/Num');
+const { Injection, Validator, Lang, Num, Event, Doc } = require('@farahub/framework/facades');
 const mongoose = require('mongoose');
 const flatten = require('lodash/flatten');
+
 const ProductListValidator = require('../validators/ProductListValidator');
 const CreateOrUpdateProductValidator = require('../validators/CreateOrUpdateProductValidator');
-const Event = require('../../../facades/Event');
 const ProductCreatedOrUpdated = require('../events/ProductCreatedOrUpdated');
 const ProductDetailsValidator = require('../validators/ProductDetailsValidator');
 const ProductDeleteValidator = require('../validators/ProductDeleteValidator');
-const Doc = require('../../../facades/Doc');
 
 const { ObjectId } = mongoose.Types;
 

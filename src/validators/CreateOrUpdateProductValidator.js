@@ -1,5 +1,5 @@
+const { Doc } = require("@farahub/framework/facades");
 const mongoose = require("mongoose");
-const Doc = require("../../../facades/Doc");
 
 const { ObjectId } = mongoose.Types;
 

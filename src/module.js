@@ -1,8 +1,8 @@
-const Module = require('../../foundation/Module');
 const models = require('./models');
 const schemas = require('./schemas');
 const controllers = require('./controllers');
 const listeners = require('./listeners');
+const { Module } = require('@farahub/framework/foundation');
 
 
 class ProductsModule extends Module {
