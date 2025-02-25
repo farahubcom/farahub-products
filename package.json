@@ -1,0 +1,18 @@
+{
+    "name": "@farahub/products",
+    "version": "1.0.0",
+    "description": "Products module for the Farahub framework",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/farahubcom/farahub-products.git"
+    },
+    "license": "MIT",
+    "main": "src/module.js",
+    "files": [
+        "src/**/*"
+    ],
+    "dependencies": {
+        "@farahub/framework": "^1.0.0"
+    },
+    "devDependencies": {}
+}
