@@ -1,7 +1,5 @@
 const { Controller } = require('@farahub/framework/foundation');
-const Auth = require('../../authentication/facades/Auth');
-const Workspace = require('../../core/facades/Workspace');
-const { Injection, Validator, Lang, Num, Event, Doc } = require('@farahub/framework/facades');
+const { Auth, Injection, Validator, Lang, Num, Event, Doc, Workspace } = require('@farahub/framework/facades');
 const mongoose = require('mongoose');
 const flatten = require('lodash/flatten');
 

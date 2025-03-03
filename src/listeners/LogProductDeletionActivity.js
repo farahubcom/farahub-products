@@ -1,4 +1,4 @@
-const Listener = require("../../../foundation/Listener");
+const { Listener } = require('@farahub/framework/foundation');
 
 
 class LogProductDeletionActivity extends Listener {
