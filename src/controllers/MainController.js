@@ -85,7 +85,7 @@ class MainController extends Controller {
 
                     const Product = connection.model('Product');
 
-                    const searchInjections = await inject('search', { user });
+                    const searchInjections = await inject('search', { user, req });
 
                     let search = {
                         ...(searchInjections && Object.assign({},
