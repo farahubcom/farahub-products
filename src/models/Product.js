@@ -1,8 +1,3 @@
-const mongoose = require("mongoose");
-
-const { ObjectId } = mongoose.Types;
-
-
 class Product {
 
     /**
@@ -33,7 +28,7 @@ class Product {
      * @param {string} productId updating product
      * @returns modified product
      */
-    static async createOrUpdate(data, productId, { inject }) {
+    static async createOrUpdate(data, productId, { req, inject, connection }) {
         try {
             const Product = this.model('Product');
 
@@ -54,13 +49,13 @@ class Product {
             }
 
             // inject pre save hooks
-            await inject('preSave', { product, data })
+            await inject('preSave', { req, connection, product, data })
 
             // save the changed
             await product.save();
 
             // inject post save hooks
-            await inject('postSave', { product, data })
+            await inject('postSave', { req, connection, product, data })
 
             // return modified product
             return product;

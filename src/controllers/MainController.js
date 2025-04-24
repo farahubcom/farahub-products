@@ -184,7 +184,7 @@ class MainController extends Controller {
 
                     const Product = connection.model('Product');
 
-                    const product = await Product.createOrUpdate(data, data.id, { inject, connection });
+                    const product = await Product.createOrUpdate(data, data.id, { req, inject, connection });
 
                     // log the activity
                     req.event(new ProductCreatedOrUpdated(product, req.wsConnection, req.user));

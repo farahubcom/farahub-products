@@ -1,6 +1,6 @@
 {
     "name": "@farahub/products",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Products module for the Farahub framework",
     "repository": {
         "type": "git",
